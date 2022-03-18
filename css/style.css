@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+.fondo{
+    background-image: url(../img/fondo.jpg);
+	background-attachment: fixed;
+	background-color: #37094e21;
+    background-blend-mode: multiply;
+}
+h1{
+	color: #4a285e;
+    font-size: 3.5rem;	
+    text-align: center;
+}
+
+h2{
+	color: #9e4acf;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+h3{
+	color: #000000;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.navegacion nav{
+    display: inline-flex;
+    background-color: rgb(168 102 243 / 90%);
+    /* padding: 1rem; */
+    /* padding-right: 60px; */
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    position: sticky;
+    /* z-index: 999; */
+    width: 100%;
+    background-image: linear-gradient(359deg, #0000004a, transparent), linear-gradient(181deg, #00000040, transparent);
+
+}
+
+.navegacion nav a{
+    text-decoration: none;
+    justify-content: end;
+}
+
+.navegacion nav a img{
+    width: 80px;
+    height: 100px;
+    filter: drop-shadow(0px 3px 4px black);
+}
+
+.navegacion nav ul{
+    display: flex;
+    gap: 1em;
+    flex-direction: row-reverse;
+    padding-right: 5px;
+    
+}
+
+.navegacion nav ul li{
+    display: inline-block;
+    /*padding-right: 5px;*/
+
+
+}
+
+.navegacion nav ul li a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #a5efefc9;
+    font-weight: 700;
+    transition: color 0.5s, text-shadow 0.4s;
+    text-shadow: 1px 1px 1px black;
+}
+
+.navegacion nav ul li a:hover{
+    color: rgb(112 0 159);
+    font-weight: 800;
+    text-shadow: 1px 1px 5px #f5f5f5f7;
+}
+
+main{
+    padding-top: 2rem;
+}
+
+.seccion article p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    width: 90%;
+}
+.links{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 10px;
+    margin-right: 20px;
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    display: inline-flexbox;
+}
+.links a{
+    margin-right: 10px;
+    color: #000000;
+}
+.links a:hover{
+    color: rgb(0, 0, 0);
+    font-weight: 1000;
+}
+
+.art{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  
+}
+.art img {
+    /* width: 18%; */
+    width: 50%;
+    filter: drop-shadow(0px 3px 2px #300262);
+    padding: 10px;
+ }   
+.table{
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}    
+.pie{
+    background-color: rgba(180, 120, 248, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.pie a{
+    display: inline-flex;
+    /*margin-left: auto;*/
+    margin-right: 10px;
+    margin-left: 10px;
+    /*width: 0%;*/
+    text-align: center;
+
+}
+.pie a img{
+    width: 15%;
+    text-align: center;
+    /* padding-left: 50px; */
+}
+
+.griid{
+    /* griid para todo */
+    /* navt para la barra de navegación */
+    /* inicio para h1 y breve descripción */
+    /* histd para las historias destacadas */
+    /* ptosd para productos destacados */
+    /* vinc para los links */
+    /* foot para el footer */
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10% 15% 25% 25% 5% 10%;
+    grid-template-areas: "navt" "inicio" "histd" "ptosd" 
+    "vinc" "foot";
+}
+.gridt{
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10% 15% 45% 20% 10%;
+    grid-template-areas: "navt" "inicio" "creadora" "foot";
+}
+#navt{
+    grid-area: navt;
+}
+#inicio{
+    grid-area: inicio;
+}
+#histd{
+    grid-area: histd;
+}
+#ptosd{
+    grid-area: ptosd;
+}
+#vinc{
+    grid-area: vinc;
+}
+#foot{
+    grid-area: foot;
+}
+#creadora{
+    grid-area: creadora;
+}
+/****************** empiezan las medias querys para tablet y desktop ******************/
+
+@media screen and (min-width: 768px) {
+
+    h1{
+        color: #4a285e;
+        font-size: 3.5rem;	
+        text-align: center;
+    }
+    
+    h2{
+        color: #9e4acf;
+        text-align: center;
+        font-size: 2.6rem;
+    }
+    
+    h3{
+        color: #000000;
+        text-align: center;
+        font-size: 2.3rem;
+    }
+    
+    
+    .navegacion nav{
+        display: inline-flex;
+        background-color: rgb(168 102 243 / 90%);
+        padding: 0.5rem;
+        padding-right: 60px;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        position: sticky;
+        z-index: 999;
+        width: 100%;
+        background-image: linear-gradient(359deg, #0000004a, transparent), linear-gradient(181deg, #00000040, transparent);
+    
+    }
+    
+    .navegacion nav a{
+        text-decoration: none;
+        justify-content: end;
+    }
+    
+    .navegacion nav a img{
+        width: 100px;
+        height: 115px;
+        filter: drop-shadow(0px 3px 4px black);
+    }
+    
+    .navegacion nav ul{
+        display: flex;
+        gap: 3em;
+        flex-direction: row-reverse;
+        padding-right: 30px;
+        
+    }
+    
+    .navegacion nav ul li{
+        display: inline-block;
+        /*padding-right: 5px;*/
+    
+    
+    }
+    
+    .navegacion nav ul li a{
+        font-size: 2.3rem;
+        text-decoration: none;
+        color: #a5efefc9;
+        font-weight: 700;
+        transition: color 0.5s, text-shadow 0.4s;
+        text-shadow: 1px 1px 1px black;
+    }
+    
+    .navegacion nav ul li a:hover{
+        color: rgb(112 0 159);
+        font-weight: 800;
+        text-shadow: 1px 1px 5px #f5f5f5f7;
+    }
+    
+    main{
+        padding-top: 2rem;
+    }
+    
+    .seccion article p{
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 15px;
+        margin: 0 auto;
+        width: 71%;
+    }
+    .links{
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 600;
+        padding: 15px;
+        margin-right: 10px;
+        
+        background-color: rgba(255, 255, 255, 0.1);
+        display: inline-flexbox;
+    }
+    .links a{
+        margin-right: 10px;
+        color: #000000;
+    }
+    .links a:hover{
+        color: rgb(0, 0, 0);
+        font-weight: 1000;
+    }
+    
+    .art{
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+      
+    }
+    .art img {
+        width: 30%;
+        filter: drop-shadow(0px 3px 2px #300262)
+     }   
+    .table{
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+    }    
+    .pie{
+        background-color: rgba(180, 120, 248, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .pie a{
+        display: inline-flex;
+        /*margin-left: auto;*/
+        margin-right: 10px;
+        margin-left: 10px;
+        /*width: 0%;*/
+        text-align: center;
+    
+    }
+    
+}
+
+/****************** empiezan las medias querys para desktop ******************/
+@media screen and (min-width: 1024px) {
+
+    h1{
+        color: #4a285e;
+        font-size: xxx-large;	
+        text-align: center;
+    }
+    
+    h2{
+        color: #9e4acf;
+        text-align: center;
+        font-size: 3rem;
+    }
+    
+    h3{
+        color: #000000;
+        text-align: center;
+        font-size: 3rem;
+    }
+    
+    
+    .navegacion nav{
+        display: inline-flex;
+        background-color: rgb(168 102 243 / 90%);
+        padding: 1rem;
+        padding-right: 60px;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        background-image: linear-gradient(359deg, #0000004a, transparent), linear-gradient(181deg, #00000040, transparent);
+    
+    }
+    
+    .navegacion nav a{
+        text-decoration: none;
+        justify-content: end;
+    }
+    
+    .navegacion nav a img{
+        width: 100px;
+        height: 115px;
+        filter: drop-shadow(0px 3px 4px black);
+    }
+    
+    .navegacion nav ul{
+        display: flex;
+        gap: 3em;
+        flex-direction: row-reverse;
+        padding-right: 30px;
+        
+    }
+    
+    .navegacion nav ul li{
+        display: inline-block;
+        /*padding-right: 5px;*/
+    
+    
+    }
+    
+    .navegacion nav ul li a{
+        font-size: 2.3rem;
+        text-decoration: none;
+        color: #a5efefc9;
+        font-weight: 700;
+        transition: color 0.5s, text-shadow 0.4s;
+        text-shadow: 1px 1px 1px black;
+    }
+    
+    .navegacion nav ul li a:hover{
+        color: rgb(112 0 159);
+        font-weight: 800;
+        text-shadow: 1px 1px 5px #f5f5f5f7;
+    }
+    
+    main{
+        padding-top: 17rem;
+    }
+    
+    .seccion article p{
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 15px;
+        margin: 0 auto;
+        width: 71%;
+    }
+    .links{
+        text-align: center;
+        font-size: large;
+        font-weight: 600;
+        padding: 25px;
+        margin-right: 20px;
+        
+        background-color: rgba(255, 255, 255, 0.1);
+        display: inline-flexbox;
+    }
+    .links a{
+        margin-right: 20px;
+        color: #000000;
+    }
+    .links a:hover{
+        color: rgb(0, 0, 0);
+        font-weight: 1000;
+    }
+    
+    .art{
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+      
+    }
+    .art img {
+        width: 18%;
+        filter: drop-shadow(0px 3px 2px #300262)
+     }   
+    .table{
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+    }    
+    .pie{
+        background-color: rgba(180, 120, 248, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .pie a{
+        display: inline-flex;
+        /*margin-left: auto;*/
+        margin-right: 10px;
+        margin-left: 10px;
+        /*width: 0%;*/
+        text-align: center;
+    
+    }
+    
+}
